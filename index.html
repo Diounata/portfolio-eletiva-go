@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eletiva • Jonatham Luz</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --bg: #eef0f3;
+        --text: #1b1b1b;
+        --card-bg: #ffffff;
+        --primary: #007d9c;
+        --primary-light: #bfdee6;
+        --radius: 16px;
+        --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        --shadow-hover: 0 16px 40px rgba(0, 0, 0, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: 'Inter', sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.65;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      header {
+        backdrop-filter: blur(14px);
+        background: rgba(255, 255, 255, 0.75);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        padding: 20px 60px;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        transition: all 0.3s ease;
+      }
+
+      .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .logo h1 {
+        font-family: 'Outfit', sans-serif;
+        font-size: 28px;
+        font-weight: 600;
+        margin: 0;
+        color: var(--text);
+      }
+
+      nav.nav {
+        display: flex;
+        gap: 25px;
+      }
+
+      .nav-link {
+        text-decoration: none;
+        font-weight: 500;
+        color: #555;
+        position: relative;
+        padding: 6px 0;
+        transition: color 0.3s;
+      }
+
+      .nav-link::after {
+        content: '';
+        display: block;
+        height: 2px;
+        background: var(--primary);
+        width: 0;
+        transition: width 0.3s;
+        border-radius: 2px;
+      }
+
+      .nav-link:hover {
+        color: var(--primary);
+      }
+
+      .nav-link:hover::after {
+        width: 100%;
+      }
+
+      header p {
+        text-align: center;
+        margin-top: 6px;
+        font-size: 14px;
+        color: #555;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 50px auto;
+      }
+
+      .post {
+        background: var(--card-bg);
+        padding: 32px;
+        margin-bottom: 35px;
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        transition: 0.3s ease;
+        border: 1px solid rgba(0, 0, 0, 0.06);
+      }
+
+      .post:hover {
+        transform: translateY(-6px);
+        box-shadow: var(--shadow-hover);
+      }
+
+      .post h2 {
+        margin-top: 0;
+        font-family: 'Outfit', sans-serif;
+        font-size: 24px;
+        font-weight: 600;
+        letter-spacing: -0.3px;
+      }
+
+      .date {
+        font-size: 14px;
+        color: var(--primary);
+        background: var(--primary-light);
+        padding: 6px 12px;
+        display: inline-block;
+        border-radius: 20px;
+        font-weight: 500;
+        margin-bottom: 16px;
+      }
+
+      p {
+        font-size: 17px;
+        color: #333;
+        line-height: 1.75;
+      }
+
+      ul,
+      ol {
+        margin: 0.5rem 0;
+      }
+
+      li {
+        margin-left: 2.2rem;
+      }
+
+      footer {
+        text-align: center;
+        padding: 40px;
+        font-size: 14px;
+        color: #777;
+        margin-top: 60px;
+      }
+
+      @media (max-width: 600px) {
+        .header-container {
+          flex-direction: column;
+          gap: 12px;
+        }
+
+        nav.nav {
+          gap: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="logo">
+          <h1>Portfolio de Eletiva</h1>
+        </div>
+        <nav class="nav">
+          <a href="/index.html" class="nav-link">Aulas</a>
+          <a href="/exercicios.html" class="nav-link">Exercícios</a>
+        </nav>
+      </div>
+    </header>
+
+    <footer id="contato">© 2025 • Jonatham Luz</footer>
+  </body>
+</html>
